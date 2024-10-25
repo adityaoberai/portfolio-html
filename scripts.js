@@ -77,4 +77,38 @@ document.addEventListener('DOMContentLoaded', function() {
         skillItem.innerHTML = `<img src="${skill.icon}" alt="${skill.name} icon" class="skill-icon">${skill.name}`;
         skillsList.appendChild(skillItem);
     });
+
+    // Function to dynamically load social media links in the footer section
+    function loadSocialMediaLinks() {
+        const socialMediaLinks = [
+            { name: 'Twitter', url: 'https://twitter.com/johndoe' },
+            { name: 'LinkedIn', url: 'https://linkedin.com/in/johndoe' },
+            { name: 'GitHub', url: 'https://github.com/johndoe' }
+        ];
+
+        const footer = document.querySelector('footer ul');
+        footer.innerHTML = ''; // Clear existing list items
+
+        socialMediaLinks.forEach(link => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<a href="${link.url}">${link.name}</a>`;
+            footer.appendChild(listItem);
+        });
+    }
+
+    // Call loadSocialMediaLinks function to load the social media links
+    loadSocialMediaLinks();
+
+    // Function to animate the hero section on page load
+    function animateHeroSection() {
+        const heroSection = document.getElementById('hero');
+        heroSection.style.opacity = 0;
+        heroSection.style.transition = 'opacity 2s';
+        setTimeout(() => {
+            heroSection.style.opacity = 1;
+        }, 100);
+    }
+
+    // Call animateHeroSection function to animate the hero section on page load
+    animateHeroSection();
 });
