@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
 }
 
 header {
@@ -27,12 +27,18 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a.nav-link:hover {
+    color: #ff7e5f; /* Hover effect for navigation links */
+}
+
 section {
     padding: 20px;
     margin: 20px 0;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out; /* Animation for section transitions */
+    height: 100vh; /* Set each section to have a height of 100vh */
 }
 
 h1 {
@@ -70,4 +76,46 @@ h1 {
         display: block;
         margin: 10px 0;
     }
+}
+
+/* Styles for the hero section */
+#hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+/* Styles for the footer section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Styles for vector graphics in each section */
+#about img, #skills img, #projects img, #jobs img, #blogs img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Styles for the new tech stack section in the "Projects" section */
+#tech-stack {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the new links section in the "Blogs" section */
+#blog-links {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
